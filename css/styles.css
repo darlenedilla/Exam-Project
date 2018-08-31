@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Delius');
+
+/*Sætter margin og padding til 0 på alle elementer, 
+og border-box sørger for, at størrelse beregnes inklusiv 
+indhold, padding og border*/
+* {
+    padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+ }
+
+
+
+
+
+
+
+/*STYLING AF NAVBAR*/
+
+/*Styling af menubar, så den ligger horisontalt opppe i toppen af siden*/
+ul{
+	list-style-type: none;
+}
+
+/*Styling af navigationsbaren*/
+.navbar{
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	overflow: hidden;
+	background-color: #232122 ;
+	width: 100%;
+	box-shadow: 5px 10px 18px #888888;
+	z-index: 1;
+}
+
+
+/*Placerer list items til venstre inden for listen*/
+.liNavbar{
+	float: right;
+}
+
+/*List items og tilhørende anchor-tags bliver stylet*/
+.liNavbar .aNavbar{
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 16px 16px;
+	padding-top: 10px;
+	text-decoration: none;
+	font-size: 1.75em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+
+/*Den aktive side får en mørk baggrundsfarve*/
+.active{
+	background-color: #1b4b5a;
+}
+
+/*Når man hover over et menupunkt får den en mørk baggrundsfarve*/
+.liNavbar .aNavbar:hover{
+	background-color: #7BA4A8;
+}
+
+/*Styling af logo*/
+.logo{
+	width: 95px;
+	height: 57px;
+	float:left;
+	margin-left: 1%;
+	margin-top: 1px;
+	border-radius:7px;
+}
+
+
+
+
+
+ /*STYLING AF FORSIDEN*/
+
+/*Indsætter billede som baggrund på forsiden*/
+.bgImage{
+	background: url(../images/soenderborg.jpg) no-repeat center center fixed; 
+	background-size: cover;
+}
+
+
+/*Styler overskriften på hver side*/
+#heading{
+	margin: auto;
+	padding-top: 60px;
+	width: 50%;
+}
+
+/*Font til alle heading 1*/
+.topHeading{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 4em;
+	color: #232122;
+	text-align: center;
+}
+
+
+/*Tekst på forsiden*/
+.frontPageText{
+	font-family: 'Delius', cursive;
+	font-weight: 400;
+	text-align: center;
+}
+
+#fpText1{
+	font-size: 4em;
+}
+
+
+#fpText2{
+	font-size: 2.5em;
+}
+
+/*Ramme omkring rekst på forsiden*/
+#frontPageTextWrapper{
+	height: 135px;
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	background-color: rgba(123, 164, 168, 0.30);
+	border-radius: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+/*STYLING AF PORTFOLIE SIDE*/
+
+/*styling af hver række i kolonnerne*/
+#row {
+    display: flex;
+    flex-wrap: wrap;
+	padding: 0 4px;
+	margin: auto;
+	position:relative;
+}
+
+/*Styling af boks omkring kolonner*/
+.projects{
+	width: 100%;
+	padding-top: 1%;
+	margin: auto;
+}
+
+/*Styling af kolonner til visning af projekter*/
+.column {
+    flex: 25%;
+	max-width: 25%;
+	margin: auto;
+}
+
+/*Når man holder musen over billede, så bliver den gennemsigtig*/
+.projectImg:hover{
+	opacity: 0.5;
+}
+
+/*Placering af første beskrivelse*/
+#imgDescription1 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 4.25%;
+	right: 0;
+  }
+
+/*Placering af anden beskrivelse*/
+#imgDescription2 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 37.50%;
+	right: 0;
+  }
+
+/*Placering af tredje beskrivelse*/
+#imgDescription3 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 70.50%;
+	right: 0;
+	
+  }
+
+  /*Styling af beskrivelse til portfoliebilleder*/
+.imgDescription{
+	background: rgba(50, 50, 50, 0.75);
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	width: 320px;
+	height: 420px;
+	border-radius: 7px;
+	font-family: 'roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	text-align: justify;
+	padding-top: 12%;
+	padding-left: 1%;
+	padding-right: 1%;
+  }
+
+/*Når man holder musen over projektbillede, så kommer tekst frem for billede 1*/
+.imageWrapper:hover #imgDescription1 {
+	visibility: visible;
+	opacity: 1;
+  }
+
+  /*Når man holder musen over projektbillede, så kommer tekst frem for billede 2*/
+.imageWrapper:hover #imgDescription2 {
+	visibility: visible;
+	opacity: 1;
+  }
+
+  /*Når man holder musen over projektbillede, så kommer tekst frem for billede 3*/
+.imageWrapper:hover #imgDescription3 {
+	visibility: visible;
+	opacity: 1;
+  }
+
+  /*Størrelse på ramme omrking projektbillede*/
+.imageWrapper{
+	  width: 300px;
+	  height: 420px;
+  }
+
+
+/*Styling af billedene inde i kolonnerne*/
+.projectImg {
+	margin-top:8px;
+	background-color: #DDDEDE;
+	border-radius: 7px;
+	width: 315px;
+	height: 420px;
+	box-shadow: 5px 10px 18px #888888;
+	margin:auto;
+}
+
+
+
+
+/*Flytter billederne i kolonner ned under hinanden når skærmen bliver mindre end 600px*/
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 99.99%;
+        max-width: 99.99%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*STYLING AF FOOTER*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #232122;
+    color: #ffffff;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: .75em;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+
+
+
+
+
+
+
+/*STYLING AF ABOUT SIDEN*/
+
+/*Styling af portrætbilledet*/
+.portraitWrapper{
+	width: 300px;
+	height: 400px;
+	margin-left: 22%;
+	margin-top: 10%;
+	float:left;
+	box-shadow: 5px 10px 18px #888888;
+	overflow: none;
+	display:block;
+	border-radius: 7px;
+}
+
+#portrait{
+	border-radius: 7px;
+}
+
+
+/*Styling af teksten om mig*/
+.aboutMeText{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	width: 400px;
+	height: 400px;
+	float: right;
+	margin-top: 8%;
+	margin-right: 22%;
+	text-align: justify;
+	text-justify: inter-word;
+	line-height: 1.6;
+}
+
+/*Styling af heading i about*/
+#aboutMeHeading{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 4em;
+	color: #232122;
+}
+
+
+
+
+/*Ramme omkring skills-ikoner*/
+.skillsBorder{
+	margin-top: 7%;
+}
+
+/*Placering af skills-ikoner*/
+.skill{
+	margin-right: 15px;
+}
+
+
+
+
+
+/*STYLING AF CONTACT*/
+
+
+/*Styling af kontaktinformationer*/
+#phone, #privateEm, #schoolEm{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.5em;
+	text-align: center;
+	margin: auto;
+	float: none;
+}
+
+
+
+/*Farve på kontaktinformation som link*/
+a{
+	color: #232122;
+	text-decoration-line: none;
+}
+
+/*Styling af kontaktinformationer*/
+.contactInfo{
+	overflow: auto;
+	width: 100%;
+	margin: auto;
+	vertical-align: middle;
+	padding-top: 20%;
+	text-align: center;
+	z-index: 3;
+}
+
+.contactImg{
+	display: block;
+	margin:auto;
+	width: 128px;
+	height: 128px;
+	border-radius: 7px;
+	z-index: 3;
+}
+
+
+
+
+
